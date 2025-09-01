@@ -19,7 +19,7 @@ from models import (
     Statement, KnowledgeGraph, TemporalQuery, QueryResult, 
     TemporalClass, FactType, Triplet, TemporalEvent
 )
-from temporal_agent import TemporalAgent
+from temporal_agent import TemporalAgent, TemporalQueryEngine
 
 
 class KnowledgeGraphManager:
