@@ -81,7 +81,40 @@ def load_demo_data(api_key: str):
 def main():
     # Header
     st.markdown('<h1 class="main-header">🧠 Temporal Knowledge Graph Demo</h1>', unsafe_allow_html=True)
-    st.markdown("*Based on OpenAI Cookbook: Temporal Agents with Knowledge Graphs*")
+    st.markdown("*Based on [OpenAI Cookbook: Temporal Agents with Knowledge Graphs](https://cookbook.openai.com/examples/partners/temporal_agents_with_knowledge_graphs/temporal_agents_with_knowledge_graphs)*")
+    
+    # Instructions and overview
+    with st.expander("📖 How to Use This Demo", expanded=False):
+        st.markdown("""
+        ### Welcome to the Temporal Knowledge Graph Demo! 🎯
+        
+        This application demonstrates how to build and query temporal knowledge graphs that track information changes over time.
+        
+        #### 🚀 Quick Start:
+        1. **Enter your OpenAI API key** in the sidebar (or set it in environment variables)
+        2. **Load demo data** by clicking "🎯 Load Demo Data" to see the system in action
+        3. **Explore the tabs** to add content, query information, and analyze timelines
+        
+        #### 📊 What You Can Do:
+        - **Add Content**: Process individual statements or entire documents
+        - **Query & Search**: Ask questions about entities or use natural language queries
+        - **Timeline View**: See how entities and relationships evolve over time
+        - **Analytics**: Analyze the composition and health of your knowledge graph
+        - **Browse Data**: Filter and explore all statements in your graph
+        
+        #### 🧠 Key Concepts:
+        - **Temporal Classification**: Statements are classified as Atemporal (never change), Static (valid from a point), or Dynamic (evolve over time)
+        - **Triplets**: Knowledge is stored as Subject-Predicate-Object relationships
+        - **Temporal Events**: Track when information becomes valid, invalid, or expires
+        - **Entity Resolution**: Automatically link related information across statements
+        
+        #### 💡 Example Queries:
+        - "Who was CEO of TechCorp in 2023?"
+        - "What acquisitions did Microsoft make?"
+        - "When did John Smith become CEO?"
+        
+        **👈 Start by entering your API key in the sidebar and loading the demo data!**
+        """)
     
     # Sidebar for configuration
     with st.sidebar:
