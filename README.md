@@ -114,7 +114,7 @@ python cli_demo.py
 
 1. **Launch the web app:**
 ```bash
-streamlit run streamlit_demo.py
+streamlit run Home.py
 ```
 
 2. **Open your browser** to the displayed URL (typically http://localhost:8501)
@@ -275,7 +275,7 @@ temporal-knowledge-graph/
 ├── temporal_agent.py        # Temporal processing agent
 ├── utils.py                 # Utility functions and manager
 ├── cli_demo.py             # Command line interface
-├── streamlit_demo.py       # Web interface
+├── Home.py       # Web interface
 ├── test_demo.py            # Test suite
 └── research_notes.md       # Research findings from OpenAI cookbook
 ```

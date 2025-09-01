@@ -161,7 +161,7 @@ python cli_demo.py --query-entity "Company" --verbose
 
 1. **Launch Streamlit**
    ```bash
-   streamlit run streamlit_demo.py
+   streamlit run Home.py
    ```
 
 2. **Open Browser**
@@ -340,7 +340,7 @@ print(f"Loaded graph with {stats['total_statements']} statements")
 
 **Solutions**:
 1. Check that port 8501 is available
-2. Try a different port: `streamlit run streamlit_demo.py --server.port 8502`
+2. Try a different port: `streamlit run Home.py --server.port 8502`
 3. Clear Streamlit cache: `streamlit cache clear`
 
 ### Performance Optimization
