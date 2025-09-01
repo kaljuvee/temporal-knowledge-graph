@@ -1,0 +1,116 @@
+{
+  "statements": {
+    "stmt_922652": {
+      "id": "stmt_922652",
+      "text": "John Smith was appointed CEO of TechCorp on January 15, 2020.",
+      "temporal_class": "static",
+      "fact_type": "fact",
+      "triplets": [],
+      "temporal_event": null,
+      "source": "demo_doc_0",
+      "confidence": 0.8,
+      "invalidated_by": []
+    },
+    "stmt_263601": {
+      "id": "stmt_263601",
+      "text": "TechCorp acquired DataSystems Inc. for $50 million in March 2021.",
+      "temporal_class": "static",
+      "fact_type": "fact",
+      "triplets": [],
+      "temporal_event": null,
+      "source": "demo_doc_0",
+      "confidence": 0.8,
+      "invalidated_by": []
+    },
+    "stmt_845468": {
+      "id": "stmt_845468",
+      "text": "John Smith resigned as CEO of TechCorp on December 31, 2023.",
+      "temporal_class": "static",
+      "fact_type": "fact",
+      "triplets": [],
+      "temporal_event": null,
+      "source": "demo_doc_0",
+      "confidence": 0.8,
+      "invalidated_by": []
+    },
+    "stmt_548834": {
+      "id": "stmt_548834",
+      "text": "Sarah Johnson became the new CEO of TechCorp on January 1, 2024.",
+      "temporal_class": "static",
+      "fact_type": "fact",
+      "triplets": [],
+      "temporal_event": null,
+      "source": "demo_doc_1",
+      "confidence": 0.8,
+      "invalidated_by": []
+    },
+    "stmt_725447": {
+      "id": "stmt_725447",
+      "text": "TechCorp's headquarters is located in San Francisco, California.",
+      "temporal_class": "static",
+      "fact_type": "fact",
+      "triplets": [],
+      "temporal_event": null,
+      "source": "demo_doc_1",
+      "confidence": 0.8,
+      "invalidated_by": []
+    },
+    "stmt_812899": {
+      "id": "stmt_812899",
+      "text": "The speed of light in vacuum is approximately 299,792,458 meters per second.",
+      "temporal_class": "static",
+      "fact_type": "fact",
+      "triplets": [],
+      "temporal_event": null,
+      "source": "demo_doc_1",
+      "confidence": 0.8,
+      "invalidated_by": []
+    },
+    "stmt_790022": {
+      "id": "stmt_790022",
+      "text": "TechCorp reported revenue of $100 million in 2023.",
+      "temporal_class": "static",
+      "fact_type": "fact",
+      "triplets": [],
+      "temporal_event": null,
+      "source": "demo_doc_2",
+      "confidence": 0.8,
+      "invalidated_by": []
+    },
+    "stmt_953784": {
+      "id": "stmt_953784",
+      "text": "DataSystems Inc. was founded in 2015 by Mike Wilson.",
+      "temporal_class": "static",
+      "fact_type": "fact",
+      "triplets": [],
+      "temporal_event": null,
+      "source": "demo_doc_2",
+      "confidence": 0.8,
+      "invalidated_by": []
+    },
+    "stmt_745902": {
+      "id": "stmt_745902",
+      "text": "TechCorp plans to expand to European markets by 2025.",
+      "temporal_class": "static",
+      "fact_type": "fact",
+      "triplets": [],
+      "temporal_event": null,
+      "source": "demo_doc_2",
+      "confidence": 0.8,
+      "invalidated_by": []
+    },
+    "stmt_478309": {
+      "id": "stmt_478309",
+      "text": "Sarah Johnson previously worked as CTO at InnovateTech for 5 years.",
+      "temporal_class": "static",
+      "fact_type": "fact",
+      "triplets": [],
+      "temporal_event": null,
+      "source": "demo_doc_3",
+      "confidence": 0.8,
+      "invalidated_by": []
+    }
+  },
+  "entities": {},
+  "saved_at": "2025-09-01T11:08:34.898616"
+}
