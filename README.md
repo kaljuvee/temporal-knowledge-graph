@@ -2,15 +2,13 @@
 
 A comprehensive implementation of temporal knowledge graphs based on the [OpenAI Cookbook: Temporal Agents with Knowledge Graphs](https://cookbook.openai.com/examples/partners/temporal_agents_with_knowledge_graphs/temporal_agents_with_knowledge_graphs).
 
-## 🎥 Demo Video
+## 🎥 Demo Preview
 
-Watch a quick walkthrough of the Temporal Knowledge Graph Demo:
+Here's what the Temporal Knowledge Graph Demo looks like:
 
-![Demo Preview](./demo_preview.gif)
+![Temporal Knowledge Graph Demo Interface](./demo_screenshot.png)
 
-[![Demo Video](https://img.shields.io/badge/▶️-Watch%20Full%20Demo-blue?style=for-the-badge)](./demo_walkthrough.mp4)
-
-*Animated preview above shows key features. Click the button to download the full demo video.*
+*Screenshot showing the main interface with sidebar navigation, statistics dashboard, and content management tabs*
 
 ## 🌐 Live Demo
 

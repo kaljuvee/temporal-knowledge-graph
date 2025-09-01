@@ -60,20 +60,6 @@ def main():
     [OpenAI Cookbook: Temporal Agents with Knowledge Graphs](https://cookbook.openai.com/examples/partners/temporal_agents_with_knowledge_graphs/temporal_agents_with_knowledge_graphs) 
     and demonstrates how to build, manage, and query knowledge graphs that understand time.
     
-    ### 🎥 Demo Video
-    
-    Watch a quick walkthrough of the application:
-    """)
-    
-    # Check if demo video exists
-    import os
-    video_path = "../demo_walkthrough.mp4"
-    if os.path.exists(video_path):
-        st.video(video_path)
-    else:
-        st.info("📹 Demo video available in the GitHub repository: [demo_walkthrough.mp4](https://github.com/kaljuvee/temporal-knowledge-graph/blob/main/demo_walkthrough.mp4)")
-    
-    st.markdown("""
     ### What is a Temporal Knowledge Graph?
     
     A temporal knowledge graph is a data structure that stores information along with its temporal context - 
