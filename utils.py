@@ -1,21 +1,43 @@
 """
-Utility functions for Temporal Knowledge Graph
+Utility functions for the Temporal Knowledge Graph system
 """
 
 import json
-import pickle
+import os
 from datetime import datetime
-from typing import Dict, List, Any, Optional
-from pathlib import Path
+from typing import List, Dict, Any, Optional
+from dotenv import load_dotenv
 
-from models import KnowledgeGraph, Statement, TemporalQuery, QueryResult
-from temporal_agent import TemporalAgent, TemporalQueryEngine
+from models import (
+    Statement, KnowledgeGraph, TemporalQuery, QueryResult, 
+    TemporalClass, FactType, Triplet, TemporalEvent
+)
+from temporal_agent import TemporalAgent
+
+# Load environment variables
+load_dotenv()
 
 
 class KnowledgeGraphManager:
     """Manager for temporal knowledge graph operations"""
     
     def __init__(self, api_key: Optional[str] = None):
+        """Initialize the knowledge graph manager
+        
+        Args:
+            api_key: OpenAI API key. If None, will try to load from environment variables.
+        """
+        # Use provided API key or load from environment
+        if api_key is None:
+            api_key = os.getenv("OPENAI_API_KEY")
+        
+        if not api_key:
+            raise ValueError(
+                "OpenAI API key is required. "
+                "Provide it as a parameter or set OPENAI_API_KEY environment variable "
+                "or create a .env file with OPENAI_API_KEY=your-key-here"
+            )
+        
         self.kg = KnowledgeGraph()
         self.agent = TemporalAgent(api_key=api_key)
         self.query_engine = TemporalQueryEngine(self.kg, api_key=api_key)

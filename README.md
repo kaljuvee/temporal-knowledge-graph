@@ -73,7 +73,11 @@ pip install -r requirements.txt
 
 3. Set your OpenAI API key:
 ```bash
+# Option 1: Environment variable
 export OPENAI_API_KEY="your-api-key-here"
+
+# Option 2: Create .env file (recommended)
+echo "OPENAI_API_KEY=your-api-key-here" > .env
 ```
 
 ### Demo Usage

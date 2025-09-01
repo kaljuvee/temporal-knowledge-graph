@@ -11,9 +11,13 @@ from datetime import datetime, timedelta
 import json
 import os
 from typing import Dict, List, Any
+from dotenv import load_dotenv
 
 from utils import KnowledgeGraphManager, format_query_result, demo_knowledge_graph
 from models import TemporalClass, FactType
+
+# Load environment variables from .env file
+load_dotenv()
 
 
 # Page configuration
@@ -65,11 +69,9 @@ def initialize_knowledge_graph(api_key: str):
     return KnowledgeGraphManager(api_key=api_key)
 
 
-@st.cache_data
 def load_demo_data(api_key: str):
-    """Load demo data with caching"""
-    manager = demo_knowledge_graph(api_key=api_key)
-    return manager
+    """Load demo data without caching to avoid serialization issues"""
+    return demo_knowledge_graph(api_key=api_key)
 
 
 def main():
@@ -82,15 +84,17 @@ def main():
         st.header("⚙️ Configuration")
         
         # API Key input
+        default_api_key = os.getenv("OPENAI_API_KEY", "")
         api_key = st.text_input(
             "OpenAI API Key",
             type="password",
-            value=os.getenv("OPENAI_API_KEY", ""),
-            help="Enter your OpenAI API key"
+            value=default_api_key,
+            help="Enter your OpenAI API key (loaded from .env by default)"
         )
         
         if not api_key:
             st.error("Please enter your OpenAI API key to continue")
+            st.info("💡 Tip: Create a .env file with OPENAI_API_KEY=your-key-here")
             st.stop()
         
         st.divider()

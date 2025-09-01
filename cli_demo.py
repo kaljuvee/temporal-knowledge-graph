@@ -9,9 +9,13 @@ import os
 import sys
 from datetime import datetime
 from typing import Optional
+from dotenv import load_dotenv
 
 from utils import KnowledgeGraphManager, format_query_result, format_timeline_for_display, demo_knowledge_graph
 from models import TemporalQuery
+
+# Load environment variables from .env file
+load_dotenv()
 
 
 def main():
@@ -45,7 +49,7 @@ Examples:
         "--api-key", 
         type=str, 
         default=os.getenv("OPENAI_API_KEY"),
-        help="OpenAI API key (default: from OPENAI_API_KEY env var)"
+        help="OpenAI API key (default: from OPENAI_API_KEY env var or .env file)"
     )
     
     # Knowledge graph file operations
@@ -135,7 +139,8 @@ Examples:
     
     # Check API key
     if not args.api_key:
-        print("Error: OpenAI API key required. Set OPENAI_API_KEY environment variable or use --api-key")
+        print("Error: OpenAI API key required.")
+        print("Set OPENAI_API_KEY environment variable, create a .env file, or use --api-key")
         sys.exit(1)
     
     # Initialize knowledge graph manager
@@ -320,6 +325,7 @@ def interactive_mode():
     api_key = os.getenv("OPENAI_API_KEY")
     if not api_key:
         print("Error: OPENAI_API_KEY environment variable not set")
+        print("Create a .env file with OPENAI_API_KEY=your-key-here or set the environment variable")
         return
     
     manager = KnowledgeGraphManager(api_key=api_key)
