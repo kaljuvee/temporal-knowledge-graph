@@ -11,13 +11,17 @@ from datetime import datetime, timedelta
 import json
 import os
 from typing import Dict, List, Any
-from dotenv import load_dotenv
+
+# Optional dotenv import - gracefully handle if not available
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    # dotenv not available, skip loading .env file
+    pass
 
 from utils import KnowledgeGraphManager, format_query_result, demo_knowledge_graph
 from models import TemporalClass, FactType
-
-# Load environment variables from .env file
-load_dotenv()
 
 
 # Page configuration
@@ -85,11 +89,18 @@ def main():
         
         # API Key input
         default_api_key = os.getenv("OPENAI_API_KEY", "")
+        
+        # Show status of environment variable loading
+        if default_api_key:
+            st.success("✅ API key loaded from environment variables")
+        else:
+            st.info("💡 No API key found in environment. Please enter manually or create a .env file.")
+        
         api_key = st.text_input(
             "OpenAI API Key",
             type="password",
             value=default_api_key,
-            help="Enter your OpenAI API key (loaded from .env by default)"
+            help="Enter your OpenAI API key (loaded from environment/.env by default)"
         )
         
         if not api_key:

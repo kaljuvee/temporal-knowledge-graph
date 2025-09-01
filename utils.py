@@ -6,16 +6,20 @@ import json
 import os
 from datetime import datetime
 from typing import List, Dict, Any, Optional
-from dotenv import load_dotenv
+
+# Optional dotenv import - gracefully handle if not available
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    # dotenv not available, skip loading .env file
+    pass
 
 from models import (
     Statement, KnowledgeGraph, TemporalQuery, QueryResult, 
     TemporalClass, FactType, Triplet, TemporalEvent
 )
 from temporal_agent import TemporalAgent
-
-# Load environment variables
-load_dotenv()
 
 
 class KnowledgeGraphManager:

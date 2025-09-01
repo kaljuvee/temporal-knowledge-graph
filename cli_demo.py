@@ -9,13 +9,17 @@ import os
 import sys
 from datetime import datetime
 from typing import Optional
-from dotenv import load_dotenv
+
+# Optional dotenv import - gracefully handle if not available
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    # dotenv not available, skip loading .env file
+    pass
 
 from utils import KnowledgeGraphManager, format_query_result, format_timeline_for_display, demo_knowledge_graph
 from models import TemporalQuery
-
-# Load environment variables from .env file
-load_dotenv()
 
 
 def main():
