@@ -6,9 +6,11 @@ A comprehensive implementation of temporal knowledge graphs based on the [OpenAI
 
 Watch a quick walkthrough of the Temporal Knowledge Graph Demo:
 
-[![Demo Video](https://img.shields.io/badge/▶️-Watch%20Demo-blue?style=for-the-badge)](./demo_walkthrough.mp4)
+![Demo Preview](./demo_preview.gif)
 
-*Click to download and view the demo video showing key features and usage*
+[![Demo Video](https://img.shields.io/badge/▶️-Watch%20Full%20Demo-blue?style=for-the-badge)](./demo_walkthrough.mp4)
+
+*Animated preview above shows key features. Click the button to download the full demo video.*
 
 ## 🌐 Live Demo
 
