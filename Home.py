@@ -90,6 +90,20 @@ def main():
         
         This application demonstrates how to build and query temporal knowledge graphs that track information changes over time.
         
+        #### 🎥 Demo Video
+        
+        Watch a quick walkthrough of the key features:
+        """)
+        
+        # Check if demo video exists
+        import os
+        video_path = "demo_walkthrough.mp4"
+        if os.path.exists(video_path):
+            st.video(video_path)
+        else:
+            st.info("📹 Demo video available in the GitHub repository: [demo_walkthrough.mp4](https://github.com/kaljuvee/temporal-knowledge-graph/blob/main/demo_walkthrough.mp4)")
+        
+        st.markdown("""
         #### 🚀 Quick Start:
         1. **Enter your OpenAI API key** in the sidebar (or set it in environment variables)
         2. **Load demo data** by clicking "🎯 Load Demo Data" to see the system in action
